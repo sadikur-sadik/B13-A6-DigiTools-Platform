@@ -1,5 +1,5 @@
 import './App.css'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import NavBar from './NavBar/NavBar'
 import Hero from './Hero/Hero'
 import Stats from './Stats/Stats'
@@ -9,15 +9,17 @@ const digitoolsProducts = async() => {
 
   const res = await fetch('/digitools.json')
   return res.json();
-}
+};
 
 function App() {
 
   const digitoolsProductsPromise = digitoolsProducts();
 
+  const [cart , setCart] = useState([])
+
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar cart={cart}></NavBar>
 
 
       <Hero></Hero>
@@ -25,7 +27,7 @@ function App() {
       <Stats></Stats>
 
       <Suspense>
-        <Subscriptions digitoolsProductsPromise={digitoolsProductsPromise}>
+        <Subscriptions cart={cart} setCart={setCart} digitoolsProductsPromise={digitoolsProductsPromise}>
 
         </Subscriptions>
       </Suspense>

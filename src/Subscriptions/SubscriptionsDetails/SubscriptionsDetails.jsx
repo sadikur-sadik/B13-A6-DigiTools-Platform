@@ -1,6 +1,7 @@
 import React from 'react';
 import { use } from 'react';
 import All from './Details.jsx/All/All';
+import Cart from './Details.jsx/Cart/Cart';
 
 const SubscriptionsDetails = ({ digitoolsProductsPromise , toggle}) => {
 
@@ -17,7 +18,7 @@ const SubscriptionsDetails = ({ digitoolsProductsPromise , toggle}) => {
         </div> :
 
         <div>
-            
+            <Cart></Cart>
         </div>
 
        }
