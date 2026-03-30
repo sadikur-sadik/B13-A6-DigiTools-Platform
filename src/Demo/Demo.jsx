@@ -3,7 +3,13 @@ import { FaCheck } from "react-icons/fa";
 
 const Demo = () => {
     return (
-        <div className='lg:max-w-300 max-w-180 w-11/12 mx-auto grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-7.5 rounded-md my-30'>
+        <div className='md:py-30 py-20 space-y-10 w-full'>
+             <div className='space-y-4'>
+                <h1 className='md:font-extrabold md:text-[48px] text-4xl font-bold text-center'>Simple, Transparent Pricing</h1>
+                <p className='text-[#627382FF] text-center'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+            </div>
+        <div className='lg:max-w-300 max-w-180 w-11/12 mx-auto grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-7.5 rounded-md '>
+
             <section className='bg-[#f9fafcFF] border border-[#f2f2f2FF] rounded-3xl md:p-6 p-3 shadow-sm space-y-4 flex flex-col '>
                 <div className='flex-1'>
                     <h3 className='text-2xl font-bold'>Starter</h3>
@@ -69,6 +75,7 @@ const Demo = () => {
                     <button className='btn w-full font-medium md:px-5 md:py-5 px-2 py-0 rounded-full bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white '>Get Started Free</button>
                 </div>
             </section>
+        </div>
         </div>
     );
 };
