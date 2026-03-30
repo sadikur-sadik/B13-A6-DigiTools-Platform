@@ -3,6 +3,7 @@ import { Suspense, useState } from 'react'
 import NavBar from './NavBar/NavBar'
 import Hero from './Hero/Hero'
 import Stats from './Stats/Stats'
+import Demo from './Demo/Demo'
 import Subscriptions from './Subscriptions/Supscriptions'
 
 const digitoolsProducts = async() => {
@@ -30,6 +31,12 @@ function App() {
         <Subscriptions cart={cart} setCart={setCart} digitoolsProductsPromise={digitoolsProductsPromise}>
 
         </Subscriptions>
+      </Suspense>
+
+      <Suspense>
+        <Demo>
+
+        </Demo>
       </Suspense>
     </>
   )
