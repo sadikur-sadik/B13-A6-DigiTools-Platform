@@ -3,22 +3,22 @@ import { use } from 'react';
 import All from './Details.jsx/All/All';
 import Cart from './Details.jsx/Cart/Cart';
 
-const SubscriptionsDetails = ({ digitoolsProductsPromise , toggle}) => {
+const SubscriptionsDetails = ({ digitoolsProductsPromise , toggle, cart , setCart}) => {
 
-    const digitoolsData = use(digitoolsProductsPromise);
+    const digitoolsData = use(digitoolsProductsPromise );
 
-    console.log(digitoolsData)
+    
     return (
        <>
        {
         toggle ? 
 
          <div className='lg:max-w-300 max-w-180 w-full mx-auto border border-black rounded-md'>
-            <All digitoolsData={digitoolsData}></All>
+            <All digitoolsData={digitoolsData} cart={cart} setCart={setCart}></All>
         </div> :
 
         <div>
-            <Cart></Cart>
+            <Cart cart={cart} setCart={setCart}></Cart>
         </div>
 
        }

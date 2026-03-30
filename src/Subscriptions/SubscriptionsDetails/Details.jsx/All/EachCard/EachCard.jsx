@@ -2,7 +2,13 @@ import React from 'react';
 
 import { FaCheck } from "react-icons/fa";
 
-const EachCard = ({ product }) => {
+const EachCard = ({ product,cart , setCart }) => {
+
+    const handleCart = () => {
+
+        setCart([...cart , product]);
+    }
+    // console.log(cart);
     return (
         <div className='border border-[#f2f2f2FF] rounded-md p-6 space-y-4 flex flex-col relative'>
             <div className={`badge badge-soft 
@@ -25,7 +31,7 @@ const EachCard = ({ product }) => {
             </ul>
 
             <div className='flex-1'>
-                <button className='btn w-full font-medium md:px-5 md:py-5 px-2 py-0 rounded-full bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white '>Buy Now</button>
+                <button onClick={handleCart} className='btn w-full font-medium md:px-5 md:py-5 px-2 py-0 rounded-full bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white '>Buy Now</button>
             </div>
         </div>
     );

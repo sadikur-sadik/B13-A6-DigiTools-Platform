@@ -1,22 +1,29 @@
 import React from 'react';
 
-const EachCart = () => {
+const EachCart = ({cartProduct , cart , setCart}) => {
+
+    const handleRemoveBtn = () => {
+
+        const newCart = cart.filter(filteredProduct =>  cartProduct.id !== filteredProduct.id );
+        console.log(newCart);
+        setCart(newCart);
+    }
     return (
         
             <div className=''>
                 <div className='py-6 shadow-md bg-[#f9fafcFF] flex items-center justify-between rounded-md  px-2'>
                     <div className='bg-[#f9fafcFF] flex items-center gap-5'>
                         <div>
-                            <img src="https://i.ibb.co.com/Qvf7bWJJ/writing-2327400-1.png" alt="" />
+                            <img src={cartProduct.icon} alt="" />
                         </div>
                         <div>
-                            <h3 className='font-semibold text-xl'>AI Writing Pro</h3>
-                            <p className='text-[#627382FF]'>$29</p>
+                            <h3 className='font-semibold text-xl'>{cartProduct.name}</h3>
+                            <p className='text-[#627382FF]'>${cartProduct.price}</p>
                         </div>
                     </div>
 
                     <div>
-                        <button className='btn text-red-600'>Remove</button>
+                        <button onClick={handleRemoveBtn} className='btn text-red-600'>Remove</button>
                     </div>
                 </div>
             </div>

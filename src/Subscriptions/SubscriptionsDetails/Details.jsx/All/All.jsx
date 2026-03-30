@@ -1,10 +1,10 @@
 import React from 'react';
 import EachCard from './EachCard/EachCard';    
 
-const All = ({ digitoolsData }) => {
+const All = ({ digitoolsData,cart,setCart }) => {
     return (
         <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-7.5'>
-           {digitoolsData.map((product) => <EachCard key={product.id} product={product}></EachCard>)}
+           {digitoolsData.map((product) => <EachCard key={product.id} product={product} cart={cart} setCart={setCart}></EachCard>)}
         </div>
     );
 };
