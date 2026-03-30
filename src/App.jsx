@@ -3,8 +3,7 @@ import { Suspense } from 'react'
 import NavBar from './NavBar/NavBar'
 import Hero from './Hero/Hero'
 import Stats from './Stats/Stats'
-import SubscriptionsHeader from './Subscriptions/SubscriptionsHeader/SubscriptionsHeader'
-import SubscriptionsDetails from './Subscriptions/SubscriptionsDetails/SubscriptionsDetails'
+import Subscriptions from './Subscriptions/Supscriptions'
 
 const digitoolsProducts = async() => {
 
@@ -15,7 +14,7 @@ const digitoolsProducts = async() => {
 function App() {
 
   const digitoolsProductsPromise = digitoolsProducts();
-  
+
   return (
     <>
       <NavBar></NavBar>
@@ -25,10 +24,10 @@ function App() {
 
       <Stats></Stats>
 
-      <SubscriptionsHeader></SubscriptionsHeader>
-
       <Suspense>
-        <SubscriptionsDetails digitoolsProductsPromise={digitoolsProductsPromise}></SubscriptionsDetails>
+        <Subscriptions digitoolsProductsPromise={digitoolsProductsPromise}>
+
+        </Subscriptions>
       </Suspense>
     </>
   )
