@@ -1,23 +1,27 @@
 import React from 'react';
+
 import { FaCheck } from "react-icons/fa";
-const EachCard = () => {
+
+const EachCard = ({ product }) => {
     return (
         <div className='border border-[#f2f2f2FF] rounded-md p-6 space-y-4 flex flex-col relative'>
-            <div class="badge badge-soft badge-primary absolute top-4 right-4 rounded-full font-medium">Primary</div>
+            <div className={`badge badge-soft 
+                ${product.tagType === 'best-seller' ? 'badge-warning' :
+                    product.tagType === 'popular' ? 'badge-info' :
+                        product.tagType === 'new' ? 'badge-success' : ''}
+                   absolute top-4 right-4 rounded-full font-medium`}>{product.tag}</div>
             <div className='w-15 h-15 rounded-full p-3.5 border border-[#f2f2f2FF] flex-1'>
-                <img src="https://i.ibb.co.com/JW3ZkYpH/camera-8775444-1.png" alt="" />
+                <img src={product.icon} alt={product.name} />
             </div>
-            
-            <h1 className='text-2xl font-bold flex-1'>AI Writing Pro</h1>
-            
-            <p className='text-[#627382FF] flex-1'>Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.</p>
 
-            <div ><span className='text-2xl font-bold flex-1'>$29.99</span> / <span className='text-[#627382FF]'>Mo</span></div>
+            <h1 className='text-2xl font-bold flex-1'>{product.name}</h1>
+
+            <p className='text-[#627382FF] flex-1'>{product.description}</p>
+
+            <div ><span className='text-2xl font-bold flex-1'>${product.price}</span> / <span className='text-[#627382FF]'>{product.period}</span></div>
 
             <ul className='text-[#627382FF] flex-1 space-y-2'>
-                <li className='flex gap-2 items-center'><FaCheck className='text-green-500'/> Unlimited AI generations</li>
-                <li className='flex gap-2 items-center'><FaCheck className='text-green-500'/> Unlimited AI generations</li>
-                <li className='flex gap-2 items-center'><FaCheck className='text-green-500'/> Unlimited AI generations</li>
+                {product.features.map((feature, i) => <li key={i} className='flex gap-2 items-center'><FaCheck className='text-green-500' /> {feature}</li>)}
             </ul>
 
             <div className='flex-1'>

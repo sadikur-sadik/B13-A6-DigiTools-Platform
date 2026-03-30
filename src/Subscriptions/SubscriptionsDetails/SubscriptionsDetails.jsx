@@ -1,10 +1,15 @@
 import React from 'react';
+import { use } from 'react';
 import All from './Details.jsx/All/All';
 
-const SubscriptionsDetails = () => {
+const SubscriptionsDetails = ({ digitoolsProductsPromise }) => {
+
+    const digitoolsData = use(digitoolsProductsPromise);
+
+    console.log(digitoolsData)
     return (
         <div className='lg:max-w-300 max-w-180 w-full mx-auto border border-black rounded-md'>
-            <All></All>
+            <All digitoolsData={digitoolsData}></All>
         </div>
     );
 };
