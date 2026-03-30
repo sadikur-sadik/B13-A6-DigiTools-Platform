@@ -3,10 +3,18 @@ import { toast } from 'react-toastify'
 import { FaCheck } from "react-icons/fa";
 
 const EachCard = ({ product, cart, setCart }) => {
+    const find = cart.find(item => item.id === product.id);
 
     const handleCart = () => {
+        
+
+        if(find){
+            toast.warning(`${product.name} is already purchased!`);
+        }
+        else{
         toast.success(`${product.name} is add to the cart`)
         setCart([...cart, product]);
+        }
     }
     // console.log(cart);
     return (
@@ -31,7 +39,7 @@ const EachCard = ({ product, cart, setCart }) => {
             </ul>
 
             <div className='flex-1'>
-                <button onClick={handleCart} className='btn w-full font-medium md:px-5 md:py-5 px-2 py-0 rounded-full bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white '>Buy Now</button>
+                <button onClick={handleCart} className={`btn w-full font-bold md:px-5 md:py-5 px-2 py-0 rounded-full ${find ? 'btn-success text-white text-shadow-2xs' : 'bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white '} `}>{find ? 'In the cart' : 'Buy Now'}</button>
             </div>
         </div>
     );

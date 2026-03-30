@@ -23,7 +23,7 @@ const NavBar = ({cart}) => {
                             <li><a>Login</a></li>
                         </ul>
                     </div>
-                    <a className="font-bold md:py-3 py-0 md:text-2xl lg:text-4xl text-xl from-0% to-100% bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 bg-clip-text text-transparent">DigiTools</a>
+                    <a className="font-bold md:py-3 py-0 md:text-2xl lg:text-4xl text-xl  bg-clip-text text-transparent">DigiTools</a>
                 </div>
                 <div className="navbar-center  hidden lg:flex font-medium">
                     <ul className="menu menu-horizontal px-1">
