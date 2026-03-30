@@ -1,11 +1,11 @@
 import React from 'react';
-
+import {  toast } from 'react-toastify'
 import { FaCheck } from "react-icons/fa";
 
 const EachCard = ({ product,cart , setCart }) => {
 
     const handleCart = () => {
-
+        toast.success(`${product.name} is add to the cart`)
         setCart([...cart , product]);
     }
     // console.log(cart);

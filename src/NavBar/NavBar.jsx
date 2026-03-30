@@ -40,7 +40,7 @@ const NavBar = ({cart}) => {
                 <div className="navbar-end flex md:gap-2 gap-1 items-center ">
                     <div className='relative'>
                         <span><CiShoppingCart className="w-8 h-8 animate-pulse" />
-                        <div className="badge animate-bounce badge-primary h-5 w-5  p-0.5 rounded-full absolute -top-2.5 left-2 ">{cart.length}</div>
+                        <div className="badge animate-bounce  bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white text-bold h-5 w-5  p-0.5 rounded-full absolute -top-2.5 left-2 ">{cart.length}</div>
                     </span>
                     </div>
                     <p className='md:text-xl text-sm font-medium hidden sm:inline-block'>Login</p>
