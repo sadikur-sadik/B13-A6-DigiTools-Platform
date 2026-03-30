@@ -3,7 +3,7 @@ import React from 'react';
 const Explore = () => {
     return (
         <div className='w-full  md:py-30 py-20 space-y-10 bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white'>
-            <div className='lg:max-w-300 max-w-180 w-11/12 mx-auto space-y-4'>
+            <div className='lg:max-w-300 max-w-180 w-11/12 mx-auto space-y-10'>
                   <div>
                     <h1 className='text-center font-extrabold text-2xl text-white'>   
                          Ready to Transform Your Workflow?

@@ -6,6 +6,7 @@ import Stats from './Stats/Stats'
 import Demo from './Demo/Demo'
 import Steps from './Steps/Steps'
 import Explore from './Explore/Explore'
+import Footer from './Footer/Footer'
 import Subscriptions from './Subscriptions/Supscriptions'
 
 const digitoolsProducts = async() => {
@@ -45,6 +46,10 @@ function App() {
 
       <Suspense>
         <Explore></Explore>
+      </Suspense>
+
+      <Suspense>
+        <Footer></Footer>
       </Suspense>
     </>
   )
