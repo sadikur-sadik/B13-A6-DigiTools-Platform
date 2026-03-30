@@ -10,7 +10,7 @@ const EachCard = ({ product,cart , setCart }) => {
     }
     // console.log(cart);
     return (
-        <div className='border border-[#f2f2f2FF] rounded-md p-6 space-y-4 flex flex-col relative'>
+        <div className='border border-[#f2f2f2FF] rounded-md md:p-6 p-3 shadow-sm space-y-4 flex flex-col relative'>
             <div className={`badge badge-soft 
                 ${product.tagType === 'best-seller' ? 'badge-warning' :
                     product.tagType === 'popular' ? 'badge-info' :

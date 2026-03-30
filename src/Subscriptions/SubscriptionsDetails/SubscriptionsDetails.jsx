@@ -13,11 +13,11 @@ const SubscriptionsDetails = ({ digitoolsProductsPromise , toggle, cart , setCar
        {
         toggle ? 
 
-         <div className='lg:max-w-300 max-w-180 w-full mx-auto border border-black rounded-md'>
+         <div className='lg:max-w-300 max-w-180 w-11/12 mx-auto  rounded-md'>
             <All digitoolsData={digitoolsData} cart={cart} setCart={setCart}></All>
         </div> :
 
-        <div>
+        <div className='lg:max-w-300 max-w-180  w-11/12 mx-auto  rounded-md'>
             <Cart cart={cart} setCart={setCart}></Cart>
         </div>
 

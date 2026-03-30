@@ -5,7 +5,7 @@ import EmptyCart from './EmptyCart/EmptyCart';
 const Cart = ({ cart, setCart }) => {
     return (
         <div className='p-10 lg:max-w-300 max-w-180 w-full mx-auto space-y-6'>
-            <h1 className='font-bold text-2xl'>Your Cart</h1>
+            <h1 className='font-bold text-2xl text-center sm:text-left'>Your Cart</h1>
 
             {cart.length === 0 ?
                 <EmptyCart></EmptyCart> :

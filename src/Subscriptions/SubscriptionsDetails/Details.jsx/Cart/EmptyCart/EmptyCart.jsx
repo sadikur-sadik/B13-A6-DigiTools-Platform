@@ -3,7 +3,7 @@ import { CiShoppingCart } from "react-icons/ci";
 
 const EmptyCart = () => {
     return (
-        <div className=' space-y-4'>
+        <div className=' space-y-4 border border-[#f2f2f2FF] rounded-md md:p-6 p-3 shadow-sm'>
             <CiShoppingCart className='md:w-30 md:h-30 w-20 h-20 mx-auto' />
 
             <div className='space-y-2 text-center w-auto mx-auto'>
