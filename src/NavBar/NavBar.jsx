@@ -4,7 +4,7 @@ import { CiShoppingCart } from "react-icons/ci";
 const NavBar = () => {
     return (
         <div className='lg:max-w-300 max-w-180 w-full mx-auto'>
-            <div className="navbar ">
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,7 +22,7 @@ const NavBar = () => {
                             <li><a>FAQ</a></li>
                         </ul>
                     </div>
-                    <a className="font-bold md:text-2xl text-xl from-0% to-100% bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 bg-clip-text text-transparent">DigiTools</a>
+                    <a className="font-bold md:py-3 py-0 md:text-2xl lg:text-4xl text-xl from-0% to-100% bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 bg-clip-text text-transparent">DigiTools</a>
                 </div>
                 <div className="navbar-center  hidden lg:flex font-medium">
                     <ul className="menu menu-horizontal px-1">
@@ -36,7 +36,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex md:gap-2 gap-1 items-center">
-                    <span><CiShoppingCart  className="md:w-8 md:h-8 w-6 h-6" /></span>
+                    <span><CiShoppingCart  className="md:w-8 md:h-8 w-6 h-6 animate-pulse" /></span>
                     <p className='md:text-xl text-sm font-medium'>Login</p>
                     <a className="btn font-medium md:px-5 md:py-5 px-2 py-0 rounded-full bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white ">Get Started</a>
                 </div>
