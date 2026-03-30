@@ -10,7 +10,7 @@ const Demo = () => {
             </div>
         <div className='lg:max-w-300 max-w-180 w-11/12 mx-auto grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-7.5 rounded-md '>
 
-            <section className='bg-[#f9fafcFF] border border-[#f2f2f2FF] rounded-3xl md:p-6 p-3 shadow-sm space-y-4 flex flex-col '>
+            <section className='bg-[#f9fafcFF] border border-[#f2f2f2FF] rounded-md md:p-6 p-3 shadow-sm space-y-4 flex flex-col'>
                 <div className='flex-1'>
                     <h3 className='text-2xl font-bold'>Starter</h3>
                     <p className='#627382FF'>Perfect for getting started</p>

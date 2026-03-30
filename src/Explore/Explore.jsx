@@ -16,7 +16,7 @@ const Explore = () => {
 
                 <div className='text-center text-white'>
                     <div className='space-y-2'>
-                        <div className='space-x-2'>
+                        <div className='flex md:flex-row flex-col items-center justify-center gap-2'>
                             <button className='bg-white text-purple-600 rounded-full py-3 px-4 font-bold'>Explore Products</button>
                             <button className='bg-transparent rounded-full text-white border py-3 px-4 border-white'>View Pricing</button>
                         </div>
