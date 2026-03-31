@@ -30,27 +30,22 @@ function App() {
 
       <Stats></Stats>
 
-      <Suspense>
+      <Suspense fallback={<span className="loading loading-spinner loading-xs"></span>}>
         <Subscriptions cart={cart} setCart={setCart} digitoolsProductsPromise={digitoolsProductsPromise}>
 
         </Subscriptions>
       </Suspense>
-      <Suspense>
+     
         <Steps></Steps>
-      </Suspense>
-      <Suspense>
+     
         <Demo>
 
         </Demo>
-      </Suspense>
-
-      <Suspense>
+   
         <Explore></Explore>
-      </Suspense>
-
-      <Suspense>
+    
         <Footer></Footer>
-      </Suspense>
+     
     </>
   )
 }
