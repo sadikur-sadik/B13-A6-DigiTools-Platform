@@ -23,7 +23,7 @@ const Steps = () => {
                     </div>
 
                 </section>
-                <section className='flex  flex-col justify-center rounded-2xl py-22.5 md:px-6 px-3 relative space-y-4 shadow-lg border border-gray-200'>
+                <section className='flex  flex-col justify-center rounded-2xl  py-22.5 md:px-6 px-3 relative space-y-4 shadow-lg border border-gray-200'>
                     <div className="badge from-0% to-100% bg-linear-to-r absolute from-purple-700 w-8 h-8 rounded-full via-purple-600 to-purple-500 text-white text-md font-bold top-10 right-10">02</div>
 
                     <div className='w-25 h-24.75 p-6 bg-purple-100 rounded-full mx-auto'>
