@@ -8,7 +8,7 @@ import { Suspense } from 'react';
 const Supscriptions = ({ digitoolsProductsPromise, cart, setCart }) => {
 
     const [toggle, setToggle] = useState(true);
-    console.log(toggle)
+    
     return (
         <div>
             <SubscriptionsHeader cart={cart} toggle={toggle} setToggle={setToggle}></SubscriptionsHeader>
