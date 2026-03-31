@@ -50,7 +50,7 @@ Some features of the project:
     
     - Product information are fetched from JSON file by use hook.
     - Buy Now button takes the products to the cart by using useState hook.
-    - Remove button removes the product from the cart using filter method
+    - Remove button removes the product from the cart using filter method. Empty cart shows empty message.
     
 
   
