@@ -29,7 +29,7 @@ const Cart = ({ cart, setCart }) => {
                 )
             }
             </div>
-            <div className='flex justify-between items-center mt-5 '>
+            <div className={`flex justify-between items-center mt-5 ${cart.length === 0 && 'hidden'}`}>
                 <p className='text-[#627382FF]'>
                     Total
                 </p>
@@ -37,7 +37,7 @@ const Cart = ({ cart, setCart }) => {
                     ${price}
                 </p>
             </div>
-            <div className='w-full'>
+            <div className={`w-full  ${cart.length === 0 && 'hidden'}`}>
                 <button onClick={handleChekoutBtn} className='btn w-full font-medium md:px-5 md:py-5 px-2 py-0 rounded-md bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white '>Procced to Checkout</button>
             </div>
         </div>

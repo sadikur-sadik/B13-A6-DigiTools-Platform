@@ -12,13 +12,13 @@ const EachCard = ({ product, cart, setCart }) => {
             toast.warning(`${product.name} is already purchased!`);
         }
         else{
-        toast.success(`${product.name} is add to the cart`)
+        toast.info(`${product.name} is add to the cart`)
         setCart([...cart, product]);
         }
     }
     // console.log(cart);
     return (
-        <div className='border border-[#f2f2f2FF] rounded-md md:p-6 p-3 shadow-sm space-y-4 flex flex-col relative'>
+        <div className='border border-[#f2f2f2FF] rounded-md md:p-6 p-3 shadow-sm space-y-4 flex flex-col relative hover:shadow-2xl'>
             <div className={`badge badge-soft 
                 ${product.tagType === 'best-seller' ? 'badge-warning' :
                     product.tagType === 'popular' ? 'badge-info' :
@@ -39,7 +39,7 @@ const EachCard = ({ product, cart, setCart }) => {
             </ul>
 
             <div className='flex-1'>
-                <button onClick={handleCart} className={`btn w-full font-bold md:px-5 md:py-5 px-2 py-0 rounded-full ${find ? 'btn-success text-white text-shadow-2xs' : 'bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white '} `}>{find ? 'In the cart' : 'Buy Now'}</button>
+                <button onClick={handleCart} className={`btn w-full font-bold md:px-5 md:py-5 px-2 py-0 rounded-full ${find ? 'bg-green-600 text-white text-shadow-2xs' : 'bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 text-white '} `}>{find ? 'Added to Cart' : 'Buy Now'}</button>
             </div>
         </div>
     );

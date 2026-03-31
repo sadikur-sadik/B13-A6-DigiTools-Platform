@@ -1,16 +1,57 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 📂 Project Information
 
-Currently, two official plugins are available:
+## Name:
+-'Digitools-Platform'
+  
+## Project Description:
+-This project assist us buying the premium version of digital tools, especially Ai tools premium subscription.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Some features of the project:
+    - There is a navbar with logo, navigation keys , a cart button where the count of cart item is shown dynamically, Login button, and a Get started button.
+    - There is hero section that has a picture, and two buttons that helps us watch a video about the products (later) , and watch the product details.
+    - There is a stat bar
+    - in the cart section, we can see two buttons. One will show us the products, and other one will show the cart ( cart product count is shown beside the cart button )
+    - each products are show as a card, where there is a-
+        - popularity badge
+        - relevant image
+        - title
+        - description
+        - features
+        - prize
+        - and importantly an add to cart button, that helps us take the product info to cart and it immediately changes color.
+    - in the cart section-
+        - there is minimual information about the product. such as - price ,title, image
+        - a remove button which helps use remove from the cart.
+        - a checkout button, which currently remove all products from the cart. (after checkout)
+        - total amount is also shown.
+        - if cart is empty,  and empty sign is also shown.
+    - there is a 3 steps login guide
+    -3 plans according to criterias
+    - section with buttons to explore and see the pricing
+    - a footer with necessary info 
+        - social media
+        - contact 
+        - about
+        - blogs
+        - and copyright details
+        
 
-## React Compiler
+ ## Technology
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    - React.js  
+    - Tailwind CSS, DaisyUI 
+    - JavaScript (ES6+)  
+    - React-Toastify (NPM Package)  
+    - JSON (for product data)
+    - Google font
 
-## Expanding the ESLint configuration
+## 3 Features:
+    
+    - Product information are fetched from JSON file by use hook.
+    - Buy Now button takes the products to the cart by using useState hook.
+    - Remove button removes the product from the cart using filter method
+    
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  
+
